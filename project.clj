@@ -7,6 +7,8 @@
                  [com.dydra/dydra-ndk "0.0.1"]
                  ;; pick
                  [org.openrdf.sesame "2.7.3"]
+                 [org.slf4j/slf4j-api "1.7.12"]
+                 [org.slf4j/slf4j-log4j12 "1.7.12"]
                 ]
   ;; locate the dydra java ndk in a local repository
   :repositories [;; ["dydrarepo" "file:///development/lib"]
