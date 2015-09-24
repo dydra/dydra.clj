@@ -12,7 +12,7 @@
                 ]
   ;; locate the dydra java ndk in a local repository
   :repositories [;; ["dydrarepo" "file:///development/lib"]
-                 ["dydrarepo" "file:///home/arto/lib"]
+                 ["dydrarepo" "file:///home/james/lib"]
                  ]
   :repl-options {:init-ns dydra.core}
   :min-lein-version "2.5.1"

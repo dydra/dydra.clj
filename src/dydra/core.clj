@@ -43,7 +43,11 @@
   [repo query]
   (let [connection (.getConnection (ensure-repository repo))
         prepared-query (.prepareTupleQuery connection org.openrdf.query.QueryLanguage/SPARQL query)]
-    (.evaluate prepared-query)))
+    (let [results (.evaluate prepared-query)]
+      (loop []
+        (when (.hasNext results)
+          (println (.next results))
+          (recur))))))
 
 ;;; (run-sparql "marti/test" "select (count(*) as ?count) where {?s ?p ?o}")
 ;;; the equivalent, as individual steps:
